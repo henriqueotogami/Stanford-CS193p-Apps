@@ -2,7 +2,7 @@
 //  MemoryGame.swift
 //  Memorize
 //
-//  Created by Henrique Matheus Alves Pereira on 15/12/20.
+//  Created by Henrique Matheus Alves Pereira on 27/12/20.
 //
 
 import Foundation
@@ -25,7 +25,7 @@ struct MemoryGame<CardContent> {
     
     struct Card: Identifiable {
         var isFaceUp: Bool = false
-        var isMatched: Bool = false 
+        var isMatched: Bool = false
         var content: CardContent
         var id: Int
     }

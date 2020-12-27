@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Memorize
 //
-//  Created by Henrique Matheus Alves Pereira on 13/12/20.
+//  Created by Henrique Matheus Alves Pereira on 27/12/20.
 //
 
 import SwiftUI
@@ -40,8 +40,8 @@ struct CardView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-    ContentView(viewModel: <#EmojiMemoryGame#>())
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//   static var previews: some View {
+//    ContentView(viewModel: EmojiMemoryGame())
+//    }
+//}
