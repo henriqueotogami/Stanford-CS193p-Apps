@@ -23,3 +23,9 @@
 - [x] Introdução a arquitetura MVVM
 - [x] Introdução ao Xcode 12
 <hr>
+
+## Caso você queira ajudar a melhorar este repositório, qualquer ajuda é bem vinda.
+
+
+### Desenvolvido por Henrique Matheus Alves Pereira
+### E que a força esteja com você.
