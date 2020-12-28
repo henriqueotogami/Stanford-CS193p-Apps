@@ -20,7 +20,10 @@ struct ContentView: View {
         }
             .padding()
             .foregroundColor(Color.orange)
-            .font(Font.largeTitle)
+//        if viewModel.emojiCount(emojis_array: Array<MemoryGame<String>.Card>) < 5 {
+//            HStack.font(Font.largeTitle)
+//        }
+          
     }
 }
 
@@ -37,11 +40,13 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: 10.0).fill()
             }
         }
+        .frame(height: 100, alignment: .center)
+        .aspectRatio(0.4, contentMode: .fit)
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//   static var previews: some View {
-//    ContentView(viewModel: EmojiMemoryGame())
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+   static var previews: some View {
+        ContentView(viewModel: EmojiMemoryGame())
+    }
+}
