@@ -23,14 +23,25 @@ class EmojiMemoryGame {
         model.cards
     }
     
+    func totalCards () {
+        let limited: Int = 10
+        let sizeArray = model.cards.count
+        let content = 
+        return sizeArray < limited ? content.font(.largeTitle) : ContentView.font(.largeTitle)
+    }
+    
+   
+    
     //Mark: - Intent(s)
     
     func choose(card: MemoryGame<String>.Card) {
         model.choose(card: card)
     }
-    
-    func emojiCount(emojis_array: Array<MemoryGame<String>.Card>) -> Int {
-        let emojis_array = model.cards
-        return emojis_array.count
-    }
+}
+
+class TotalCards {
+    let limited: Int = 10
+    var arrayCard: Array<MemoryGame<String>.Card>
+    let sizeArray: Int = arrayCard
+    let content: String = arrayCard.content
 }
