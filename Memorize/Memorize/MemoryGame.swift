@@ -13,16 +13,16 @@ struct MemoryGame<CardContent> {
     
     func choose(card: Card) {
         print("card chosen: \(card)")
-//        print(cards)
     }
     
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
         for pairIndex in 0..<numberOfPairsOfCards {
             let content = cardContentFactory(pairIndex)
-            cards.append(Card(content: content, id: pairIndex*2))
-            cards.append(Card(content: content, id: pairIndex*2+1))
+            cards.append(Card(content: content, id: pairIndex*2, pair: numberOfPairsOfCards))
+            cards.append(Card(content: content, id: pairIndex*2+1, pair: numberOfPairsOfCards))
         }
+        cards.shuffle() //HMAP
     }
 
     struct Card: Identifiable {
@@ -30,5 +30,6 @@ struct MemoryGame<CardContent> {
         var isMatched: Bool = false
         var content: CardContent
         var id: Int
+        var pair: Int //HMAP
     }
 }

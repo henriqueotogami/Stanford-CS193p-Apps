@@ -21,8 +21,6 @@ struct ContentView: View {
             .padding()
             .foregroundColor(Color.orange)
             .frame(alignment: .center)
-        viewModel.totalCards()
-
     }
 }
 
@@ -37,11 +35,10 @@ struct CardView: View {
             } else {
                 RoundedRectangle(cornerRadius: 10.0).fill()
             }
-                Text(card.content)
-//                    .font(.largeTitle)
+            card.pair > 4 ? Text(card.content):Text(card.content).font(.largeTitle)//HMAP
         }
-        .frame(height: 100, alignment: .center)
-        .aspectRatio(0.4, contentMode: .fit)
+        .frame(height: 100, alignment: .center) //HMAP
+        .aspectRatio(0.4, contentMode: .fit) //HMAP
     }
 }
 
