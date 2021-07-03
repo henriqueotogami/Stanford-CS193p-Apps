@@ -28,7 +28,7 @@
 - [x] Lecture 1: Course Logistics and Introduction to SwiftUI
 - [x] Lecture 2: MVVM and the Swift Type System
 - [x] Lecture 3: Reactive UI + Protocols + Layout
-- [ ] Lecture 4: Grid + enum + Optionals
+- [x] Lecture 4: Grid + enum + Optionals
 - [ ] Lecture 5: ViewBuilder + Shape + ViewModifier
 - [ ] Lecture 6: Animation
 - [ ] Lecture 7: Multithreading EmojiArt
