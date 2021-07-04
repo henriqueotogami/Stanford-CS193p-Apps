@@ -29,7 +29,7 @@
 - [x] Lecture 2: MVVM and the Swift Type System
 - [x] Lecture 3: Reactive UI + Protocols + Layout
 - [x] Lecture 4: Grid + enum + Optionals
-- [ ] Lecture 5: ViewBuilder + Shape + ViewModifier
+- [x] Lecture 5: ViewBuilder + Shape + ViewModifier
 - [ ] Lecture 6: Animation
 - [ ] Lecture 7: Multithreading EmojiArt
 - [ ] Lecture 8: Gestures JSON
