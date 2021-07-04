@@ -18,6 +18,7 @@
 		97146A5F2598FA96005A35EF /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97146A5E2598FA96005A35EF /* MemoryGame.swift */; };
 		973A82BA268FFA1B00A9C3EF /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973A82B9268FFA1B00A9C3EF /* Array+Only.swift */; };
 		9746BEFB2691179B00DC357C /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746BEFA2691179B00DC357C /* Pie.swift */; };
+		9746BEFD2691378100DC357C /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746BEFC2691378100DC357C /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		97146A5E2598FA96005A35EF /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		973A82B9268FFA1B00A9C3EF /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 		9746BEFA2691179B00DC357C /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		9746BEFC2691378100DC357C /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				97146A4B2598F981005A35EF /* MemorizeApp.swift */,
 				97146A5B2598FA14005A35EF /* EmojiMemoryGame.swift */,
 				97146A4D2598F981005A35EF /* EmojiMemoriGameView.swift */,
+				9746BEFC2691378100DC357C /* Cardify.swift */,
 				9746BEFA2691179B00DC357C /* Pie.swift */,
 				970F7EF5268EA7D9004285F2 /* Grid.swift */,
 				973A82B9268FFA1B00A9C3EF /* Array+Only.swift */,
@@ -167,6 +170,7 @@
 				970F7EF6268EA7D9004285F2 /* Grid.swift in Sources */,
 				970F7EFA268EB2BC004285F2 /* Array+Identifiable.swift in Sources */,
 				97146A5C2598FA14005A35EF /* EmojiMemoryGame.swift in Sources */,
+				9746BEFD2691378100DC357C /* Cardify.swift in Sources */,
 				973A82BA268FFA1B00A9C3EF /* Array+Only.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
