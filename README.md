@@ -30,7 +30,7 @@
 - [x] Lecture 3: Reactive UI + Protocols + Layout
 - [x] Lecture 4: Grid + enum + Optionals
 - [x] Lecture 5: ViewBuilder + Shape + ViewModifier
-- [ ] Lecture 6: Animation
+- [x] Lecture 6: Animation
 - [ ] Lecture 7: Multithreading EmojiArt
 - [ ] Lecture 8: Gestures JSON
 - [ ] Lecture 9: Data Flow
