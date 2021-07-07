@@ -31,7 +31,7 @@
 - [x] Lecture 4: Grid + enum + Optionals
 - [x] Lecture 5: ViewBuilder + Shape + ViewModifier
 - [x] Lecture 6: Animation
-- [ ] Lecture 7: Multithreading EmojiArt
+- [x] Lecture 7: Multithreading EmojiArt
 - [ ] Lecture 8: Gestures JSON
 - [ ] Lecture 9: Data Flow
 - [ ] Lecture 10: Navigation + TextField
