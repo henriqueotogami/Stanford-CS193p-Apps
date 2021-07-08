@@ -27,6 +27,10 @@ struct EmojiArt {
         }
     }
     
+    var json: Data? {
+        return try? JSONEncoder().encode(self)
+    }
+    
     private var uniqueEmojiId = 0
     
     mutating func addEmoji(_ text: String, x: Int, y: Int, size: Int) {
