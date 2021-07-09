@@ -32,7 +32,7 @@
 - [x] Lecture 5: ViewBuilder + Shape + ViewModifier
 - [x] Lecture 6: Animation
 - [x] Lecture 7: Multithreading EmojiArt
-- [ ] Lecture 8: Gestures JSON
+- [x] Lecture 8: Gestures JSON
 - [ ] Lecture 9: Data Flow
 - [ ] Lecture 10: Navigation + TextField
 - [ ] Lecture 11: Picker
