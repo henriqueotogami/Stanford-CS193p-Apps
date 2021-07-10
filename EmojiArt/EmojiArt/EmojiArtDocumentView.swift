@@ -31,6 +31,8 @@ struct EmojiArtDocumentView: View {
                 )
                 .gesture(self.doubleTapToZoom(in: geometry.size))
                     if !self.isLoading {
+                        Image(systemName: "hourglass").imageScale(.large).spinning()
+                    } else {
                     ForEach(self.document.emojis) { emoji in
                         Text(emoji.text)
                             .font(animatableWithSize: emoji.fontSize * zoomScale)
@@ -54,7 +56,7 @@ struct EmojiArtDocumentView: View {
     }
     
     var isLoading: Bool {
-        document.setBackgroundURL != nil && document.backgroundImage == nil
+        document.backgroundURL != nil && document.backgroundImage == nil
     }
     
     @State private var steadyStateZoomScale: CGFloat = 1.0
