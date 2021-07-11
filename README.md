@@ -33,7 +33,7 @@
 - [x] Lecture 6: Animation
 - [x] Lecture 7: Multithreading EmojiArt
 - [x] Lecture 8: Gestures JSON
-- [ ] Lecture 9: Data Flow
+- [x] Lecture 9: Data Flow
 - [ ] Lecture 10: Navigation + TextField
 - [ ] Lecture 11: Picker
 - [ ] Lecture 12: Core Data
