@@ -10,18 +10,22 @@ import SwiftUI
 struct EmojiArtDocumentView: View {
     @ObservedObject var document: EmojiArtDocument
     
+    @State private var chosenPalette: String = ""
     var body: some View {
         VStack {
-            ScrollView (.horizontal){
-                HStack {
-                    ForEach(EmojiArtDocument.palette.map { String($0) }, id: \.self) { emoji in
-                        Text(emoji)
-                            .font(Font.system(size: self.defaultEmojiSize))
-                            .onDrag{ NSItemProvider(object: emoji as NSString)}
+            HStack {
+                PaletteChooser(document: document, chosenPalette: $chosenPalette)
+                ScrollView (.horizontal){
+                    HStack {
+                        ForEach(chosenPalette.map { String($0) }, id: \.self) { emoji in
+                            Text(emoji)
+                                .font(Font.system(size: self.defaultEmojiSize))
+                                .onDrag{ NSItemProvider(object: emoji as NSString)}
+                        }
                     }
                 }
+                .onAppear { self.chosenPalette = self.document.defaultPalette}
             }
-            .padding(.horizontal)
             GeometryReader { geometry in
                 ZStack {
                 Color.white.overlay(
@@ -44,6 +48,9 @@ struct EmojiArtDocumentView: View {
                 .gesture(panGesture())
                 .gesture(self.zoomGesture())
                 .edgesIgnoringSafeArea([.horizontal, .bottom])
+                .onReceive(self.document.$backgroundImage) { image in
+                    self.zoomToFit(image, in: geometry.size)
+                }
                 .onDrop(of: ["public.image", "public.text"], isTargeted: nil) { providers, location in
                     var location = geometry.convert(location, from: .global)
                     location = CGPoint(x: location.x - geometry.size.width/2, y: location.y - geometry.size.height/2)
