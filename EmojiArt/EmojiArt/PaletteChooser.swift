@@ -29,7 +29,7 @@ struct PaletteChooser: View {
                     self.showPaletteEditor = true
                 }
                 .sheet(isPresented: $showPaletteEditor){
-                    PaletteEditor(chosenPalette: $chosenPalette)
+                    PaletteEditor(chosenPalette: self.$chosenPalette, isShowing: self.$showPaletteEditor)
                         .environmentObject(self.document)
                         .frame(minWidth: 300, minHeight: 500)
                 }
@@ -41,12 +41,21 @@ struct PaletteChooser: View {
 struct PaletteEditor: View {
     @EnvironmentObject var document: EmojiArtDocument
     @Binding var chosenPalette: String
+    @Binding var isShowing: Bool
     @State private var paletteName: String = ""
     @State private var emojisToAdd: String = ""
     
     var body: some View {
         VStack(spacing: 0) {
-            Text("Palette Editor").font(.headline).padding()
+            ZStack {
+                Text("Palette Editor").font(.headline).padding()
+                HStack {
+                    Spacer()
+                    Button ( action:{
+                        self.isShowing = false
+                    }, label: { Text("Done") } ).padding()
+                }
+            }
             Divider()
             Form {
                 Section {
@@ -84,10 +93,10 @@ struct PaletteEditor: View {
     let fontSize: CGFloat = 40
 }
 
-/*
+
 struct PaletteChooser_Previews: PreviewProvider {
     static var previews: some View {
         PaletteChooser(document: EmojiArtDocument(), chosenPalette: Binding.constant(""))
     }
 }
-*/
+

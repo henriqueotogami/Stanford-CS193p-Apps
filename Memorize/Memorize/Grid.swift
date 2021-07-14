@@ -13,7 +13,7 @@ extension Grid where Item: Identifiable, ID == Item.ID {
     }
 }
 
-struct Grid<Item, ID, ItemView>: View where Item: Identifiable, ID: Hashable, ItemView: View {
+struct Grid<Item, ID, ItemView>: View where ID: Hashable, ItemView: View {
     private var items: [Item]
     private var id: KeyPath<Item, ID>
     private var viewForItem: (Item) -> ItemView
