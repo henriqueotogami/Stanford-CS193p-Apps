@@ -25,22 +25,24 @@ struct Grid<Item, ID, ItemView>: View where ID: Hashable, ItemView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
+        GeometryReader (content: { geometry in
             self.body(for: GridLayout(itemCount: self.items.count, in: geometry.size))
-        }
+        })
     }
+    
     private func body(for layout: GridLayout) -> some View {
         return ForEach(items, id: id) { item in
             self.body(for: item, in: layout)
         }
     }
+    
     private func body(for item: Item, in layout: GridLayout) -> some View {
-        let index = items.firstIndex(where: { item[keyPath: id] == $0[keyPath: id]} )
+        let index = items.firstIndex(where: { item[keyPath: id] == $0[keyPath: id] } )
         return Group {
             if index != nil {
-            viewForItem(item)
-                .frame(width: layout.itemSize.width, height: layout.itemSize.height)
-                .position(layout.location(ofItemAt: index!))
+                viewForItem(item)
+                    .frame(width: layout.itemSize.width, height: layout.itemSize.height)
+                    .position(layout.location(ofItemAt: index!))
             }
         }
     }
