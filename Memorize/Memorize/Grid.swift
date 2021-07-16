@@ -25,9 +25,9 @@ struct Grid<Item, ID, ItemView>: View where ID: Hashable, ItemView: View {
     }
     
     var body: some View {
-        GeometryReader (content: { geometry in
+        GeometryReader { geometry in
             self.body(for: GridLayout(itemCount: self.items.count, in: geometry.size))
-        })
+        }
     }
     
     private func body(for layout: GridLayout) -> some View {
