@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9707A5BD26ACA04D00ED1B51 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9707A5BC26ACA04D00ED1B51 /* MapView.swift */; };
 		97D4D71B26A4D84100322106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4D71A26A4D84100322106 /* AppDelegate.swift */; };
 		97D4D71D26A4D84100322106 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4D71C26A4D84100322106 /* SceneDelegate.swift */; };
 		97D4D72226A4D84100322106 /* Enroute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97D4D72026A4D84100322106 /* Enroute.xcdatamodeld */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9707A5BC26ACA04D00ED1B51 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		97D4D71726A4D84100322106 /* Enroute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enroute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D4D71A26A4D84100322106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D4D71C26A4D84100322106 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				97D4D73226A4D96F00322106 /* FilterFlights.swift */,
 				97D4D73126A4D96F00322106 /* FlightsEnrouteView.swift */,
+				9707A5BC26ACA04D00ED1B51 /* MapView.swift */,
 				97F7A0AA26A78CF0001B9646 /* L12 */,
 				97F7A09C26A78AFE001B9646 /* L11 */,
 				97F7A0B726A78D20001B9646 /* FlightAware */,
@@ -229,6 +232,7 @@
 				97F7A0B626A78D03001B9646 /* FlightSimulationData.swift in Sources */,
 				97F7A0A226A78C93001B9646 /* Airports.swift in Sources */,
 				97D4D73326A4D96F00322106 /* FlightsEnrouteView.swift in Sources */,
+				9707A5BD26ACA04D00ED1B51 /* MapView.swift in Sources */,
 				97F7A0A826A78CCA001B9646 /* Flight.swift in Sources */,
 				97F7A0B426A78D03001B9646 /* FlightAware+AirportInfo.swift in Sources */,
 				97D4D73F26A4E34600322106 /* FoundationExtensions.swift in Sources */,

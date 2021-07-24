@@ -2,7 +2,8 @@
 //  EmojiArt.swift
 //  EmojiArt
 //
-//  Created by Henrique Matheus Alves Pereira on 06/07/21.
+//  Created by CS193p Instructor on 4/27/20.
+//  Copyright © 2020 Stanford University. All rights reserved.
 //
 
 import Foundation
@@ -13,10 +14,10 @@ struct EmojiArt: Codable {
     
     struct Emoji: Identifiable, Codable, Hashable {
         let text: String
-        var x: Int // Offset from center
-        var y: Int // Offset from center
+        var x: Int
+        var y: Int
         var size: Int
-        var id: Int
+        let id: Int
         
         fileprivate init(text: String, x: Int, y: Int, size: Int, id: Int) {
             self.text = text
@@ -31,15 +32,15 @@ struct EmojiArt: Codable {
         return try? JSONEncoder().encode(self)
     }
     
-    init?(json: Data?){
-        if json != nil, let newEmojiArt = try? JSONDecoder().decode(EmojiArt.self, from: json!){
+    init?(json: Data?) {
+        if json != nil, let newEmojiArt = try? JSONDecoder().decode(EmojiArt.self, from: json!) {
             self = newEmojiArt
         } else {
             return nil
         }
     }
     
-    init(){}
+    init() { }
     
     private var uniqueEmojiId = 0
     

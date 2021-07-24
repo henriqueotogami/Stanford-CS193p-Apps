@@ -2,7 +2,8 @@
 //  EmojiArtDocumentChooser.swift
 //  EmojiArt
 //
-//  Created by Henrique Matheus Alves Pereira on 14/07/21.
+//  Created by CS193p Instructor on 5/6/20.
+//  Copyright © 2020 Stanford University. All rights reserved.
 //
 
 import SwiftUI
@@ -17,7 +18,8 @@ struct EmojiArtDocumentChooser: View {
             List {
                 ForEach(store.documents) { document in
                     NavigationLink(destination: EmojiArtDocumentView(document: document)
-                                    .navigationBarTitle(self.store.name(for: document))) {
+                        .navigationBarTitle(self.store.name(for: document))
+                    ) {
                         EditableText(self.store.name(for: document), isEditing: self.editMode.isEditing) { name in
                             self.store.setName(name, for: document)
                         }
@@ -35,8 +37,9 @@ struct EmojiArtDocumentChooser: View {
                     self.store.addDocument()
                 }, label: {
                     Image(systemName: "plus").imageScale(.large)
-            }),
-                trailing: EditButton())
+                }),
+                trailing: EditButton()
+            )
             .environment(\.editMode, $editMode)
         }
     }

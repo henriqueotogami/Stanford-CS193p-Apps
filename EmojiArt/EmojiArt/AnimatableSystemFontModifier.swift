@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-// ViewModifer to set the font to the system font of a given size
-// (and weight and design)
-// Changes to the size can be animated
-
 struct AnimatableSystemFontModifier: AnimatableModifier {
     var size: CGFloat
     var weight: Font.Weight = .regular

@@ -2,7 +2,8 @@
 //  Spinning.swift
 //  EmojiArt
 //
-//  Created by Henrique Matheus Alves Pereira on 10/07/21.
+//  Created by CS193p Instructor on 5/4/20.
+//  Copyright © 2020 Stanford University. All rights reserved.
 //
 
 import SwiftUI
@@ -12,9 +13,9 @@ struct Spinning: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .rotationEffect(Angle(degrees:isVisible ? 360 : 0))
+            .rotationEffect(Angle(degrees: isVisible ? 360 : 0))
             .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
-            .onAppear { self.isVisible = true}
+            .onAppear { self.isVisible = true }
     }
 }
 

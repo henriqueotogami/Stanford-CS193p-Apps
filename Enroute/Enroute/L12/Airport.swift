@@ -8,8 +8,17 @@
 
 import CoreData
 import Combine
+import MapKit
 
-extension Airport: Comparable {
+extension Airport: MKAnnotation {
+    public var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    public var title: String? { name ?? icao }
+    public var subtitle: String? { location }
+}
+
+extension Airport: Identifiable, Comparable {
     static func withICAO(_ icao: String, context: NSManagedObjectContext) -> Airport {
         // look up icao in Core Data
         let request = fetchRequest(NSPredicate(format: "icao_ = %@", icao))

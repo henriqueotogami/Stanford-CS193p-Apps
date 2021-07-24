@@ -2,14 +2,15 @@
 //  EmojiArtDocument.swift
 //  EmojiArt
 //
-//  Created by Henrique Matheus Alves Pereira on 05/07/21.
+//  Created by CS193p Instructor on 4/27/20.
+//  Copyright © 2020 Stanford University. All rights reserved.
 //
 
 import SwiftUI
 import Combine
 
-class EmojiArtDocument: ObservableObject, Hashable, Identifiable {
-    
+class EmojiArtDocument: ObservableObject, Hashable, Identifiable
+{
     static func == (lhs: EmojiArtDocument, rhs: EmojiArtDocument) -> Bool {
         lhs.id == rhs.id
     }
@@ -20,11 +21,11 @@ class EmojiArtDocument: ObservableObject, Hashable, Identifiable {
         hasher.combine(id)
     }
     
-    static let palette: String = "⭐️🌨🍎🌏🥨⚾️"
+    
+    
+    static let palette: String = "⭐️⛈🍎🌏🥨⚾️"
     
     @Published private var emojiArt: EmojiArt
-    
-    private static let untitled = "EmojiArtDocument.Untitled"
     
     private var autosaveCancellable: AnyCancellable?
     
@@ -33,17 +34,34 @@ class EmojiArtDocument: ObservableObject, Hashable, Identifiable {
         let defaultsKey = "EmojiArtDocument.\(self.id.uuidString)"
         emojiArt = EmojiArt(json: UserDefaults.standard.data(forKey: defaultsKey)) ?? EmojiArt()
         autosaveCancellable = $emojiArt.sink { emojiArt in
-            print("\(emojiArt.json?.utf8 ?? "nil")")
             UserDefaults.standard.set(emojiArt.json, forKey: defaultsKey)
         }
         fetchBackgroundImageData()
     }
     
+    var url: URL? { didSet { self.save(self.emojiArt) } }
+    
+    init(url: URL) {
+        self.id = UUID()
+        self.url = url
+        self.emojiArt = EmojiArt(json: try? Data(contentsOf: url)) ?? EmojiArt()
+        fetchBackgroundImageData()
+        autosaveCancellable = $emojiArt.sink { emojiArt in
+            self.save(emojiArt)
+        }
+    }
+    
+    private func save(_ emojiArt: EmojiArt) {
+        if url != nil {
+            try? emojiArt.json?.write(to: url!)
+        }
+    }
+        
     @Published private(set) var backgroundImage: UIImage?
     
     @Published var steadyStateZoomScale: CGFloat = 1.0
     @Published var steadyStatePanOffset: CGSize = .zero
-    
+
     var emojis: [EmojiArt.Emoji] { emojiArt.emojis }
     
     // MARK: - Intent(s)
@@ -60,11 +78,11 @@ class EmojiArtDocument: ObservableObject, Hashable, Identifiable {
     }
     
     func scaleEmoji(_ emoji: EmojiArt.Emoji, by scale: CGFloat) {
-        if let index  = emojiArt.emojis.firstIndex(matching: emoji) {
+        if let index = emojiArt.emojis.firstIndex(matching: emoji) {
             emojiArt.emojis[index].size = Int((CGFloat(emojiArt.emojis[index].size) * scale).rounded(.toNearestOrEven))
         }
     }
-    
+
     var backgroundURL: URL? {
         get {
             emojiArt.backgroundURL
@@ -82,7 +100,7 @@ class EmojiArtDocument: ObservableObject, Hashable, Identifiable {
         if let url = self.emojiArt.backgroundURL {
             fetchImageCancellable?.cancel()
             fetchImageCancellable = URLSession.shared.dataTaskPublisher(for: url)
-                .map { data, urlResponse in UIImage(data: data)}
+                .map { data, urlResponse in UIImage(data: data) }
                 .receive(on: DispatchQueue.main)
                 .replaceError(with: nil)
                 .assign(to: \.backgroundImage, on: self)
@@ -91,6 +109,6 @@ class EmojiArtDocument: ObservableObject, Hashable, Identifiable {
 }
 
 extension EmojiArt.Emoji {
-    var fontSize: CGFloat { CGFloat(self.size)}
-    var location: CGPoint { CGPoint(x: CGFloat(x), y: CGFloat(y))}
+    var fontSize: CGFloat { CGFloat(self.size) }
+    var location: CGPoint { CGPoint(x: CGFloat(x), y: CGFloat(y)) }
 }

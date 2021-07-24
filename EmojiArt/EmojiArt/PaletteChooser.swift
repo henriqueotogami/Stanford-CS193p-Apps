@@ -2,7 +2,8 @@
 //  PaletteChooser.swift
 //  EmojiArt
 //
-//  Created by Henrique Matheus Alves Pereira on 10/07/21.
+//  Created by CS193p Instructor on 5/4/20.
+//  Copyright © 2020 Stanford University. All rights reserved.
 //
 
 import SwiftUI
@@ -11,24 +12,21 @@ struct PaletteChooser: View {
     @ObservedObject var document: EmojiArtDocument
     
     @Binding var chosenPalette: String
-    
     @State private var showPaletteEditor = false
     
     var body: some View {
         HStack {
             Stepper(onIncrement: {
                 self.chosenPalette = self.document.palette(after: self.chosenPalette)
-            },
-            onDecrement: {
+            }, onDecrement: {
                 self.chosenPalette = self.document.palette(before: self.chosenPalette)
-            },
-            label: {EmptyView()})
+            }, label: { EmptyView() })
             Text(self.document.paletteNames[self.chosenPalette] ?? "")
             Image(systemName: "keyboard").imageScale(.large)
                 .onTapGesture {
                     self.showPaletteEditor = true
                 }
-                .popover(isPresented: $showPaletteEditor){
+                .popover(isPresented: $showPaletteEditor) {
                     PaletteEditor(chosenPalette: self.$chosenPalette, isShowing: self.$showPaletteEditor)
                         .environmentObject(self.document)
                         .frame(minWidth: 300, minHeight: 500)
@@ -40,6 +38,7 @@ struct PaletteChooser: View {
 
 struct PaletteEditor: View {
     @EnvironmentObject var document: EmojiArtDocument
+    
     @Binding var chosenPalette: String
     @Binding var isShowing: Bool
     @State private var paletteName: String = ""
@@ -51,9 +50,9 @@ struct PaletteEditor: View {
                 Text("Palette Editor").font(.headline).padding()
                 HStack {
                     Spacer()
-                    Button ( action:{
+                    Button(action: {
                         self.isShowing = false
-                    }, label: { Text("Done") } ).padding()
+                    }, label: { Text("Done") }).padding()
                 }
             }
             Divider()
@@ -71,7 +70,7 @@ struct PaletteEditor: View {
                         }
                     })
                 }
-                Section (header: Text("Remove Emoji")) {
+                Section(header: Text("Remove Emoji")) {
                     Grid(chosenPalette.map { String($0) }, id: \.self) { emoji in
                         Text(emoji).font(Font.system(size: self.fontSize))
                             .onTapGesture {
@@ -85,7 +84,7 @@ struct PaletteEditor: View {
         .onAppear { self.paletteName = self.document.paletteNames[self.chosenPalette] ?? "" }
     }
     
-    // MARK: -- Drawing Constants
+    // MARK: - Drawing Constants
     
     var height: CGFloat {
         CGFloat((chosenPalette.count - 1) / 6) * 70 + 70
@@ -94,9 +93,23 @@ struct PaletteEditor: View {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 struct PaletteChooser_Previews: PreviewProvider {
     static var previews: some View {
         PaletteChooser(document: EmojiArtDocument(), chosenPalette: Binding.constant(""))
     }
 }
-
