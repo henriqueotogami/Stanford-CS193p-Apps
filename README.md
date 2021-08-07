@@ -4,18 +4,92 @@
 #### Contato do Paul: [E-mail](phegarty@stanford.edu) | [Piazza](https://piazza.com/professors/show/paul_hegarty)
 #### Período: 13/12/2020  - 06/08/2021
 #### [Clique aqui para acessar a playlist do Youtube no canal do Filipe Deschamps com o conteúdo do curso](https://www.youtube.com/playlist?list=PLMdYygf53DP46rneFgJ7Ab6fJPcMvr8gC)
-<hr>
 
 > É importante destacar que no primeiro vídeo da playlist indicada acima, o [Filipe Deschamps](https://github.com/filipedeschamps) mostra uma forma de assistir os vídeos com legenda automática em português - Brasil. 
-
+>
 > A Stanford disponibilizou gratuitamente todo o material, porém está completamente em inglês. No entanto, no decorrer do meu aprendizado, irei disponibilizando um PDF para cada tarefa necessária em português para avançar as etapas, em que eu irei traduzindo.
+
+<img width="auto" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/HMAP-CS193p-2020-Cover.png?raw=true"> 
+
+#### Sumário [PT-BR]
+- [x] Aula 01: Introdução ao Swift e SwiftUI
+- [x] Aula 02: MVVM e sistema de tipos de dados em Swift
+- [x] Aula 03: UI reativa + Protocolos + Layout
+- [x] Aula 04: Grid + Enum + Optionais
+- [x] Aula 05: Construtor de visual. + Forma + Modificador de visual.
+- [x] Aula 06: Animações
+- [x] Aula 07: Multithreading EmojiArt
+- [x] Aula 08: Gestos multitoques e JSON
+- [x] Aula 09: Fluxo de dados
+- [x] Aula 10: Navegação + Campo de texto
+- [x] Aula 11: Selecionador
+- [x] Aula 12: Núcleo de dados
+- [x] Aula 13: Persistência
+- [x] Aula 14: Integração com o UIKit
+
+<details>
+  <summary>Sumário [EN-USA]</summary>
+  
+- [x] Lecture 01: Course Logistics and Introduction to SwiftUI
+- [x] Lecture 02: MVVM and the Swift Type System
+- [x] Lecture 03: Reactive UI + Protocols + Layout
+- [x] Lecture 04: Grid + enum + Optionals
+- [x] Lecture 05: ViewBuilder + Shape + ViewModifier
+- [x] Lecture 06: Animation
+- [x] Lecture 07: Multithreading EmojiArt
+- [x] Lecture 08: Gestures JSON
+- [x] Lecture 09: Data Flow
+- [x] Lecture 10: Navigation + TextField
+- [x] Lecture 11: Picker
+- [x] Lecture 12: Core Data
+- [x] Lecture 13: Persistence
+- [x] Lecture 14: UIKit Integration
+  
+</details>
+
 <hr>
 
-#### Pasta: Tarefa 1
-> Contém os arquivos em PDF necessários para a primeira tarefa. Para realizar essa tarefa, os conhecimentos estão nos vídeos das Lectures 1 e 2.
+#### Carga horária: Aproximadamente 20hs de curso.
 
-##### App: MemorizeGame
-> O aplicativo desenvolvido é um jogo da memória, utilizando emojis como sendo o conteúdo das cartas a serem utilizadas.
+
+#### Aplicativos desenvolvidos
+
+<img width=100 src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/iconsApp/JoyStickAppIconRounded.png?raw=true"> 
+
+<details>
+  <summary>Primeiro App: Memorize</summary>
+  
+> O aplicativo desenvolvido é um jogo da memória, utilizando emojis como sendo o conteúdo das cartas a serem combinadas. Após terminar de encontrar todas as combinações, o usuário deve pressionar o botão de **New Game** para o app realizar uma nova combinação. 
+> 
+> Neste app, também foram implementadas: animações, como por exemplo, de cartas sendo viradas ao serem tocadas; inicialização de um temporizador para combinação de duas cartas iguais; adequcão aos modos claro e escuro, que são nativos do sistema; E suporte a rotação de tela.
+  
+  <hr>
+</details>
+
+<img width=100 src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/iconsApp/GhostAppIconRounded.png?raw=true"> 
+
+<details>
+  <summary>Segundo App: Emoji Art</summary>
+  
+> O aplicativo desenvolvido é um jogo da memória, utilizando emojis como sendo o conteúdo das cartas a serem combinadas. Após terminar de encontrar todas as combinações, o usuário deve pressionar o botão de **New Game** para o app realizar uma nova combinação. 
+> 
+> Neste app, também foram implementadas: animações, como por exemplo, de cartas sendo viradas ao serem tocadas; inicialização de um temporizador para combinação de duas cartas iguais; adequcão aos modos claro e escuro, que são nativos do sistema; E suporte a rotação de tela.
+  
+  <hr>
+</details>
+
+<img width=100 src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/iconsApp/MapAppIconRounded.png?raw=true"> 
+
+<details>
+  <summary>Terceiro App: Enroute</summary>
+  
+> O aplicativo desenvolvido é um jogo da memória, utilizando emojis como sendo o conteúdo das cartas a serem combinadas. Após terminar de encontrar todas as combinações, o usuário deve pressionar o botão de **New Game** para o app realizar uma nova combinação. 
+> 
+> Neste app, também foram implementadas: animações, como por exemplo, de cartas sendo viradas ao serem tocadas; inicialização de um temporizador para combinação de duas cartas iguais; adequcão aos modos claro e escuro, que são nativos do sistema; E suporte a rotação de tela.
+
+</details>
+
+<hr>
 
 ##### Conhecimentos:
 - [x] Introdução ao Swift
@@ -25,27 +99,24 @@
 
 <hr>
 
-<img width="auto" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/HMAP-CS193p-2020-Cover.png?raw=true"> 
+<div>
+  <div>
+    <h3>M E M O R I Z E</h3>
+    <img width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Memorize.gif?raw=true">
+  </div>
 
-#### Sumário
-- [x] Lecture | Aula 01: Course logistics and introduction to SwiftUI | **[PT-BR] Introdução ao Swift e SwiftUI**
-- [x] Lecture | Aula 02: MVVM and the Swift type system               | **[PT-BR] MVVM e sistema de tipos de dados em Swift**
-- [x] Lecture | Aula 03: Reactive UI + Protocols + Layout             | **[PT-BR] UI reativa + Protocolos + Layout**
-- [x] Lecture | Aula 04: Grid + Enum + Optionais                      | **[PT-BR] Grid + Enum + Optionais**
-- [x] Lecture | Aula 05: ViewBuilder + Shape + ViewModifier           | **[PT-BR] Construtor de visual. + Forma + Modificador de visual.**
-- [x] Lecture | Aula 06: Animation                                    | **[PT-BR] Animações**
-- [x] Lecture | Aula 07: Multithreading EmojiArt
-- [x] Lecture | Aula 08: Gestures and JSON                            | **[PT-BR] Gestos multitoques e JSON**
-- [x] Lecture | Aula 09: Data flow                                    | **[PT-BR] Fluxo de dados**
-- [x] Lecture | Aula 10: Navigation + TextField                       | **[PT-BR] Navegação + Campo de texto**
-- [x] Lecture | Aula 11: Picker                                       | **[PT-BR] Selecionador**
-- [x] Lecture | Aula 12: Core data                                    | **[PT-BR] Núcleo de dados**
-- [x] Lecture | Aula 13: Persistence                                  | **[PT-BR] Persistência**
-- [x] Lecture | Aula 14: UIKit integration                            | **[PT-BR] Integração com o UIKit**
+  <div>
+    <h3>E M O J I A R T</h3>
+    <img width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/EmojiArt.gif?raw=true">
+  </div>
+
+  <div>
+    <h3>E N R O U T E</h3>
+    <img width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Enroute.gif?raw=true">
+  </div>
+</div>
 
 <hr>
-
-#### Carga horária: Aproximadamente 20hs de curso.
 
 #### Resumo das aulas:
 
@@ -161,6 +232,11 @@ Na palestra final do curso de desenvolvimento iOS de Stanford da primavera de 20
   
 Depois de uma explicação muito básica de como o UIKit faz algumas coisas que são diferentes do SwiftUI (especialmente a delegação), a API em SwiftUI para integrar o código do UIKit é explicada. Duas de nossas demonstrações existentes são então aprimoradas usando este mecanismo: um mapa é adicionado ao Enroute para mostrar e escolher o aeroporto de destino e o EmojiArt oferece suporte ao uso da câmera do dispositivo para tirar uma foto e usar como imagem de fundo.
 </details>
+
+---
+
+### Créditos
+
 
 ---
 
