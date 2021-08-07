@@ -107,6 +107,8 @@
   <img alt="E N R O U T E" width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Enroute.gif?raw=true">
 </div>
 
+<img alt="E M O J I A R T" width="auto" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/EmojiArt-iPadOS.gif?raw=true">
+
 <hr>
 
 #### Resumo das aulas:
