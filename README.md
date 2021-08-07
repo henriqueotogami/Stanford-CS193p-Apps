@@ -25,6 +25,8 @@
 
 <hr>
 
+<img width="auto" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/HMAP-CS193p-2020-Cover.png?raw=true"> 
+
 #### Sumário
 - [x] Lecture | Aula 01: Course logistics and introduction to SwiftUI | **[PT-BR] Introdução ao Swift e SwiftUI**
 - [x] Lecture | Aula 02: MVVM and the Swift type system               | **[PT-BR] MVVM e sistema de tipos de dados em Swift**
