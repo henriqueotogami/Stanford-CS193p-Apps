@@ -228,7 +228,7 @@ Depois de uma explicação muito básica de como o UIKit faz algumas coisas que 
 
 ### Créditos
 
-- [x] [Richard Orwhat | Product Designer](https://orwhat.cc) : [Figma | Template iPhone SE 2 Generation 2020](https://www.figma.com/community/file/882254519102673494/Flat-iPhone-SE%2C-7%2C-8%2C-X%2C-11%2C-12-Pro-Mockup)
+- [x] [Richard Horvath | Product Designer](https://orwhat.cc) : [Figma | Template iPhone SE 2 Generation 2020](https://www.figma.com/community/file/882254519102673494/Flat-iPhone-SE%2C-7%2C-8%2C-X%2C-11%2C-12-Pro-Mockup)
 - [x] [SVG REPO | Gamepad Joystick Vector SVG Icon](https://www.svgrepo.com/svg/275640/gamepad-joystick) : Memorize App Icon
 - [x] [SVG REPO | Ghost Vector SVG Icon](https://www.svgrepo.com/svg/312257/ghost) : Emoji Art App Icon
 - [x] [SVG REPO | Route Vector SVG Icon](https://www.svgrepo.com/svg/19537/route) : Enroute App Icon
