@@ -71,9 +71,9 @@
 <details>
   <summary>Segundo App: Emoji Art</summary>
   
-> O aplicativo desenvolvido é um jogo da memória, utilizando emojis como sendo o conteúdo das cartas a serem combinadas. Após terminar de encontrar todas as combinações, o usuário deve pressionar o botão de **New Game** para o app realizar uma nova combinação. 
+> O aplicativo desenvolvido é destinado a criar imagens personalizadas com emojis. As imagens são obtidas a partir do link de endereço da imagem na internet. O usuário pode criar novas paletas de emojis ou editar as paletas já existentes. 
 > 
-> Neste app, também foram implementadas: animações, como por exemplo, de cartas sendo viradas ao serem tocadas; inicialização de um temporizador para combinação de duas cartas iguais; adequcão aos modos claro e escuro, que são nativos do sistema; E suporte a rotação de tela.
+> Neste app, também foram implementadas: edição do nome de cada seção de criação, exclusão de seção de criação, suporte ao iOS e iPadOS, suporte a gestos de pinça e zoom in / zoom out.
   
   <hr>
 </details>
@@ -83,37 +83,28 @@
 <details>
   <summary>Terceiro App: Enroute</summary>
   
-> O aplicativo desenvolvido é um jogo da memória, utilizando emojis como sendo o conteúdo das cartas a serem combinadas. Após terminar de encontrar todas as combinações, o usuário deve pressionar o botão de **New Game** para o app realizar uma nova combinação. 
+> O aplicativo desenvolvido é um agregador de voos para cidades diferentes de países diferentes. As informações de voo são obtidas em tempo real a partir do consumo de uma API.
 > 
-> Neste app, também foram implementadas: animações, como por exemplo, de cartas sendo viradas ao serem tocadas; inicialização de um temporizador para combinação de duas cartas iguais; adequcão aos modos claro e escuro, que são nativos do sistema; E suporte a rotação de tela.
+> Neste app, também foram implementadas: filtro de voos contendo opções de busca por aeroportos, cidades de origem e destino e etc.
 
 </details>
 
 <hr>
 
-##### Conhecimentos:
-- [x] Introdução ao Swift
-- [x] Introdução ao SwiftUI
-- [x] Introdução a arquitetura MVVM
-- [x] Introdução ao Xcode 12
+##### Conhecimentos obtidos:
+- [x] Swift
+- [x] SwiftUI
+- [x] Arquitetura MVVM
+- [x] Xcode 12
+- [x] Xcode simulator
+- [x] Core Data
 
 <hr>
 
 <div>
-  <div>
-    <h3>M E M O R I Z E</h3>
-    <img width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Memorize.gif?raw=true">
-  </div>
-
-  <div>
-    <h3>E M O J I A R T</h3>
-    <img width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/EmojiArt.gif?raw=true">
-  </div>
-
-  <div>
-    <h3>E N R O U T E</h3>
-    <img width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Enroute.gif?raw=true">
-  </div>
+  <img alt="M E M O R I Z E" width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Memorize.gif?raw=true">
+  <img alt="E M O J I A R T" width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/EmojiArt.gif?raw=true">
+  <img alt="E N R O U T E" width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Enroute.gif?raw=true">
 </div>
 
 <hr>
@@ -237,12 +228,16 @@ Depois de uma explicação muito básica de como o UIKit faz algumas coisas que 
 
 ### Créditos
 
+- [x] [Richard Orwhat | Product Designer](https://orwhat.cc) : [Figma | Template iPhone SE 2 Generation 2020](https://www.figma.com/community/file/882254519102673494/Flat-iPhone-SE%2C-7%2C-8%2C-X%2C-11%2C-12-Pro-Mockup)
+- [x] [SVG REPO | Gamepad Joystick Vector SVG Icon](https://www.svgrepo.com/svg/275640/gamepad-joystick) : Memorize App Icon
+- [x] [SVG REPO | Ghost Vector SVG Icon](https://www.svgrepo.com/svg/312257/ghost) : Emoji Art App Icon
+- [x] [SVG REPO | Route Vector SVG Icon](https://www.svgrepo.com/svg/19537/route) : Enroute App Icon
 
 ---
 
 > ### Caso você queira ajudar a melhorar este repositório, qualquer ajuda é bem vinda.
 > 
-> **E que a força esteja com você.**
+> ### **E que a força esteja com você.**
 > 
-> Desenvolvido por Henrique Matheus Alves Pereira
+> ### Desenvolvido por **HMAP | Henrique Matheus Alves Pereira** 🦁
 
