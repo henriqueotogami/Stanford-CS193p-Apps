@@ -152,11 +152,10 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
                 stopUsingBonusTime()
             }
         }
+
         var content: CardContent
         var id: Int
-    
         var bonusTimeLimit: TimeInterval = 6
-
 
         private var faceUpTime: TimeInterval {
             if let lastFaceUpDate = self.lastFaceUpDate {
@@ -167,9 +166,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
 
         var lastFaceUpDate: Date?
-
         var pastFaceUpTime: TimeInterval = 0
-
         var bonusTimeRemaining: TimeInterval {
             max(0, bonusTimeLimit - faceUpTime)
         }
@@ -204,8 +201,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
 
 
 </details>
-
-<br>
 
 <img width=100 src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/iconsApp/GhostAppIconRounded.png?raw=true"> 
 
@@ -279,7 +274,6 @@ struct EmojiArt: Codable {
 
 </details>
 
-<br>
 
 <img width=100 src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/iconsApp/MapAppIconRounded.png?raw=true"> 
 
@@ -342,13 +336,15 @@ struct EnrouteApp: App {
 
 <hr>
 
-<div>
+<div align="center">
   <img alt="M E M O R I Z E" width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Memorize.gif?raw=true">
   <img alt="E M O J I A R T" width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/EmojiArt.gif?raw=true">
   <img alt="E N R O U T E" width="250" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/Enroute.gif?raw=true">
 </div>
 
+<div align="center">
 <img alt="E M O J I A R T" width="auto" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/gifsApp/EmojiArt-iPadOS.gif?raw=true">
+</div>
 
 <hr>
 
