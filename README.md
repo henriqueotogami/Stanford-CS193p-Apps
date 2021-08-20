@@ -3,7 +3,28 @@
 ### Lecionado por: Paul Hegarty 
 #### Contato do Paul: [E-mail](phegarty@stanford.edu) | [Piazza](https://piazza.com/professors/show/paul_hegarty)
 #### Período: 13/12/2020  - 06/08/2021
-#### [Clique aqui para acessar a playlist do Youtube no canal do Filipe Deschamps com o conteúdo do curso](https://www.youtube.com/playlist?list=PLMdYygf53DP46rneFgJ7Ab6fJPcMvr8gC)
+
+<br>
+
+
+<div align="center">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/henriquemap/Stanford-CS193p-first-project">
+</div>
+
+<br>
+
+<div align="center">
+<img alt="" src="https://img.shields.io/github/issues/HenriqueMAP/Stanford-CS193p-first-project">
+<img alt="" src="https://img.shields.io/github/forks/HenriqueMAP/Stanford-CS193p-first-project">
+<img alt="" src="https://img.shields.io/github/stars/HenriqueMAP/Stanford-CS193p-first-project">
+<img alt="" src="https://img.shields.io/github/license/HenriqueMAP/Stanford-CS193p-first-project">
+</div>
+
+<br>
+
+#### [Acesse a playlist do Youtube com o conteúdo do curso](https://www.youtube.com/playlist?list=PLMdYygf53DP46rneFgJ7Ab6fJPcMvr8gC)
+
+<br>
 
 > É importante destacar que no primeiro vídeo da playlist indicada acima, o [Filipe Deschamps](https://github.com/filipedeschamps) mostra uma forma de assistir os vídeos com legenda automática em português - Brasil. 
 >
@@ -11,7 +32,9 @@
 
 <img width="auto" src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/HMAP-CS193p-2020-Cover.png?raw=true"> 
 
+
 #### Sumário [PT-BR]
+
 - [x] Aula 01: Introdução ao Swift e SwiftUI
 - [x] Aula 02: MVVM e sistema de tipos de dados em Swift
 - [x] Aula 03: UI reativa + Protocolos + Layout
@@ -56,8 +79,11 @@
 
 <img width=100 src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/iconsApp/JoyStickAppIconRounded.png?raw=true"> 
 
+
+<h4><b>Memorize</b></h4>
+
 <details>
-  <summary>Primeiro App: Memorize</summary>
+  <summary>Descrição do aplicativo</summary>
   
 > O aplicativo desenvolvido é um jogo da memória, utilizando emojis como sendo o conteúdo das cartas a serem combinadas. Após terminar de encontrar todas as combinações, o usuário deve pressionar o botão de **New Game** para o app realizar uma nova combinação. 
 > 
@@ -66,22 +92,203 @@
   <hr>
 </details>
 
+<details>
+    <summary>Código de exemplo</summary>
+
+> MemoryGame.swift
+
+```swift
+
+import Foundation
+
+struct MemoryGame<CardContent> where CardContent: Equatable {
+    private(set) var cards: Array<Card>
+    private var indexOfTheOneAndOnlyFaceUpCard: Int? {
+        get { cards.indices.filter { cards[$0].isFaceUp }.only}
+        set {
+            for index in cards.indices {
+                    cards[index].isFaceUp = index == newValue
+                }
+            }
+        }
+    
+    mutating func choose(card: Card) {
+        print("card chosen: \(card)")
+        if let chosenIndex = cards.firstIndex(matching: card), !cards[chosenIndex].isFaceUp, !cards[chosenIndex].isMatched {
+            if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
+                if cards[chosenIndex].content == cards[potentialMatchIndex].content {
+                    cards[chosenIndex].isMatched = true
+                    cards[potentialMatchIndex].isMatched = true
+                }
+                self.cards[chosenIndex].isFaceUp = true
+            } else {
+                indexOfTheOneAndOnlyFaceUpCard = chosenIndex
+            }
+        }
+    }
+    
+    init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
+        cards = Array<Card>()
+        for pairIndex in 0..<numberOfPairsOfCards {
+            let content = cardContentFactory(pairIndex)
+            cards.append(Card(content: content, id: pairIndex*2))
+            cards.append(Card(content: content, id: pairIndex*2+1))
+        }
+        cards.shuffle()
+    }
+
+    struct Card: Identifiable {
+        var isFaceUp: Bool = false {
+            didSet {
+                if isFaceUp {
+                    startUsingBonusTime()
+                } else {
+                    stopUsingBonusTime()
+                }
+            }
+        }
+        var isMatched: Bool = false {
+            didSet {
+                stopUsingBonusTime()
+            }
+        }
+        var content: CardContent
+        var id: Int
+    
+        var bonusTimeLimit: TimeInterval = 6
+
+
+        private var faceUpTime: TimeInterval {
+            if let lastFaceUpDate = self.lastFaceUpDate {
+                return pastFaceUpTime + Date().timeIntervalSince(lastFaceUpDate)
+            } else {
+                return pastFaceUpTime
+            }
+        }
+
+        var lastFaceUpDate: Date?
+
+        var pastFaceUpTime: TimeInterval = 0
+
+        var bonusTimeRemaining: TimeInterval {
+            max(0, bonusTimeLimit - faceUpTime)
+        }
+
+        var bonusRemaining: Double {
+            (bonusTimeLimit > 0 && bonusTimeRemaining > 0) ? bonusTimeRemaining/bonusTimeLimit : 0
+        }
+
+        var hasEarnedBonus: Bool {
+            isMatched && bonusTimeRemaining > 0
+        }
+
+        var isConsumingBonusTime: Bool {
+            isFaceUp && !isMatched && bonusTimeRemaining > 0
+        }
+
+        private mutating func startUsingBonusTime() {
+            if isConsumingBonusTime, lastFaceUpDate == nil {
+                lastFaceUpDate = Date()
+            }
+        }
+
+        private mutating func stopUsingBonusTime() {
+            pastFaceUpTime = faceUpTime
+            self.lastFaceUpDate = nil
+        }
+    }
+}
+
+
+```
+
+
+</details>
+
+<br>
+
 <img width=100 src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/iconsApp/GhostAppIconRounded.png?raw=true"> 
 
+
+<h4><b>Emoji Art</b></h4>
+
 <details>
-  <summary>Segundo App: Emoji Art</summary>
+  <summary>Descrição ddo aplicativo</summary>
   
 > O aplicativo desenvolvido é destinado a criar imagens personalizadas com emojis. As imagens são obtidas a partir do link de endereço da imagem na internet. O usuário pode criar novas paletas de emojis ou editar as paletas já existentes. 
 > 
 > Neste app, também foram implementadas: edição do nome de cada seção de criação, exclusão de seção de criação, suporte ao iOS e iPadOS, suporte a gestos de pinça e zoom in / zoom out.
   
   <hr>
+
 </details>
+
+
+<details>
+    <summary>Código de exemplo</summary>
+
+> EmojiArt.swift
+
+```swift
+
+import Foundation
+
+struct EmojiArt: Codable {
+    var backgroundURL: URL?
+    var emojis = [Emoji]()
+    
+    struct Emoji: Identifiable, Codable, Hashable {
+        let text: String
+        var x: Int
+        var y: Int
+        var size: Int
+        let id: Int
+        
+        fileprivate init(text: String, x: Int, y: Int, size: Int, id: Int) {
+            self.text = text
+            self.x = x
+            self.y = y
+            self.size = size
+            self.id = id
+        }
+    }
+    
+    var json: Data? {
+        return try? JSONEncoder().encode(self)
+    }
+    
+    init?(json: Data?) {
+        if json != nil, let newEmojiArt = try? JSONDecoder().decode(EmojiArt.self, from: json!) {
+            self = newEmojiArt
+        } else {
+            return nil
+        }
+    }
+    
+    init() { }
+    
+    private var uniqueEmojiId = 0
+    
+    mutating func addEmoji(_ text: String, x: Int, y: Int, size: Int) {
+        uniqueEmojiId += 1
+        emojis.append(Emoji(text: text, x: x, y: y, size: size, id: uniqueEmojiId))
+    }
+}
+
+```
+
+</details>
+
+<br>
 
 <img width=100 src="https://github.com/HenriqueMAP/Stanford-CS193p-first-project/blob/main/iconsApp/MapAppIconRounded.png?raw=true"> 
 
+
+<h4><b>Enroute</b></h4>
+
+
 <details>
-  <summary>Terceiro App: Enroute</summary>
+  <summary>Descrição do aplicativo</summary>
   
 > O aplicativo desenvolvido é um agregador de voos para cidades diferentes de países diferentes. As informações de voo são obtidas em tempo real a partir do consumo de uma API.
 > 
@@ -89,10 +296,44 @@
 
 </details>
 
+
+<details>
+    <summary>Código de exemplo</summary>
+
+> EnroutApp.swift
+
+
+```swift
+
+import SwiftUI
+
+@main
+struct EnrouteApp: App {
+    let persistenceController = PersistenceController.shared
+    let defaultAirport: Airport
+    
+    init() {
+        defaultAirport = Airport.withICAO("KSFO", context: PersistenceController.shared.container.viewContext)
+        defaultAirport.fetchIncomingFlights()
+    }
+
+    var body: some Scene {
+        WindowGroup {
+            FlightsEnrouteView(flightSearch: FlightSearch(destination: defaultAirport))
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        }
+    }
+}
+
+````
+
+</details>
+
+
 <hr>
 
 ##### Conhecimentos obtidos:
-- [x] Swift
+- [x] Swift 5.3
 - [x] SwiftUI
 - [x] Arquitetura MVVM
 - [x] Xcode 12
