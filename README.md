@@ -475,7 +475,19 @@ Depois de uma explicação muito básica de como o UIKit faz algumas coisas que 
 ---
 
 > ### Caso você queira ajudar a melhorar este repositório, qualquer ajuda é bem vinda.
-> 
+
+
+- [x] Faça um **fork** deste repositório (https://github.com/HenriqueMAP/Stanford-CS193p-Apps/fork);
+- [x] Crie um **branch** com as suas modificações ` git checkout -b meu-novo-recurso `;
+- [x] Faça um **commit** ` git commit -am 'Adicionando um novo recurso ...'`;
+- [x] Faça um **push** ` git push origin meu-novo-recurso ` ;
+- [x] Crie uma nova *pull request* neste repositório.
+
+**Depois que sua solicitação (pull request) for aceita e adicionada (merged) ao ramo principal (branch main), você pode excluir sua branch tranquilamente.**
+
+</details>
+
+
 > ### **E que a força esteja com você.**
 > 
 > ### Desenvolvido por **HMAP | Henrique Matheus Alves Pereira** 🦁
