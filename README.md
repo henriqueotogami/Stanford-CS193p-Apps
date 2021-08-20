@@ -1,11 +1,17 @@
+<div align="center">
+
 ## Curso: [Stanford CS193p](https://cs193p.sites.stanford.edu)
-### Desenvolvimento de Aplicativos para IOS - Primavera de 2020.
-### Lecionado por: Paul Hegarty 
-#### Contato do Paul: [E-mail](phegarty@stanford.edu) | [Piazza](https://piazza.com/professors/show/paul_hegarty)
-#### Período: 13/12/2020  - 06/08/2021
+
+### Desenvolvimento de Aplicativos para IOS
+
+### Primavera de 2020
+
+### Paul Hegarty: [E-mail](phegarty@stanford.edu) | [Piazza](https://piazza.com/professors/show/paul_hegarty)
+#### Período de estudos: 13/12/2020  - 06/08/2021
+
+</div>
 
 <br>
-
 
 <div align="center">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/henriquemap/Stanford-CS193p-first-project">
@@ -481,14 +487,16 @@ Depois de uma explicação muito básica de como o UIKit faz algumas coisas que 
 - [x] Crie um **branch** com as suas modificações ` git checkout -b meu-novo-recurso `;
 - [x] Faça um **commit** ` git commit -am 'Adicionando um novo recurso ...'`;
 - [x] Faça um **push** ` git push origin meu-novo-recurso ` ;
-- [x] Crie uma nova *pull request* neste repositório.
+- [x] Crie uma nova **pull request** neste repositório.
 
 **Depois que sua solicitação (pull request) for aceita e adicionada (merged) ao ramo principal (branch main), você pode excluir sua branch tranquilamente.**
 
 </details>
 
+<div align="center">
 
-> ### **E que a força esteja com você.**
+> ### **Muito obrigado, e que a força esteja com você.**
 > 
 > ### Desenvolvido por **HMAP | Henrique Matheus Alves Pereira** 🦁
 
+</div>
