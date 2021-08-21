@@ -477,6 +477,7 @@ Depois de uma explicação muito básica de como o UIKit faz algumas coisas que 
 - [x] [SVG REPO | Gamepad Joystick Vector SVG Icon](https://www.svgrepo.com/svg/275640/gamepad-joystick) : Memorize App Icon
 - [x] [SVG REPO | Ghost Vector SVG Icon](https://www.svgrepo.com/svg/312257/ghost) : Emoji Art App Icon
 - [x] [SVG REPO | Route Vector SVG Icon](https://www.svgrepo.com/svg/19537/route) : Enroute App Icon
+- [x] [Shields.io | Badges Info from Github](https://img.shields.io)
 
 ---
 
