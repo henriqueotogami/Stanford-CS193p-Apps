@@ -14,16 +14,16 @@
 <br>
 
 <div align="center">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/henriqueotogami/Stanford-CS193p-first-project">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/henriqueotogami/Stanford-CS193p-Apps">
 </div>
 
 <br>
 
 <div align="center">
-<img alt="" src="https://img.shields.io/github/issues/henriqueotogami/Stanford-CS193p-first-project">
-<img alt="" src="https://img.shields.io/github/forks/henriqueotogami/Stanford-CS193p-first-project">
-<img alt="" src="https://img.shields.io/github/stars/henriqueotogami/Stanford-CS193p-first-project">
-<img alt="" src="https://img.shields.io/github/license/henriqueotogami/Stanford-CS193p-first-project">
+<img alt="" src="https://img.shields.io/github/issues/henriqueotogami/Stanford-CS193p-Apps">
+<img alt="" src="https://img.shields.io/github/forks/henriqueotogami/Stanford-CS193p-Apps">
+<img alt="" src="https://img.shields.io/github/stars/henriqueotogami/Stanford-CS193p-Apps">
+<img alt="" src="https://img.shields.io/github/license/henriqueotogami/Stanford-CS193p-Apps">
 </div>
 <br>
 <div align=center>
@@ -40,7 +40,7 @@
 >
 > A Stanford disponibilizou gratuitamente todo o material, porém está completamente em inglês. No entanto, no decorrer do meu aprendizado, irei disponibilizando um PDF para cada tarefa necessária em português para avançar as etapas, em que eu irei traduzindo.
 
-<img width="auto" src="https://github.com/henriqueotogami/Stanford-CS193p-first-project/blob/main/HMAP-CS193p-2020-Cover.png?raw=true"> 
+<img width="auto" src="https://github.com/henriqueotogami/Stanford-CS193p-Apps/blob/main/HMAP-CS193p-2020-Cover.png?raw=true"> 
 
 
 #### Sumário [PT-BR]
@@ -87,8 +87,7 @@
 
 #### Aplicativos desenvolvidos
 
-<img width=100 src="https://github.com/henriqueotogami/Stanford-CS193p-first-project/blob/main/iconsApp/JoyStickAppIconRounded.png?raw=true"> 
-
+<img width=100 src="https://github.com/henriqueotogami/Stanford-CS193p-Apps/blob/main/iconsApp/JoyStickAppIconRounded.png?raw=true"> 
 
 <h4><b>Memorize</b></h4>
 
@@ -212,7 +211,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
 
 </details>
 
-<img width=100 src="https://github.com/henriqueotogami/Stanford-CS193p-first-project/blob/main/iconsApp/GhostAppIconRounded.png?raw=true"> 
+<img width=100 src="https://github.com/henriqueotogami/Stanford-CS193p-Apps/blob/main/iconsApp/GhostAppIconRounded.png?raw=true"> 
 
 
 <h4><b>Emoji Art</b></h4>
@@ -285,7 +284,7 @@ struct EmojiArt: Codable {
 </details>
 
 
-<img width=100 src="https://github.com/henriqueotogami/Stanford-CS193p-first-project/blob/main/iconsApp/MapAppIconRounded.png?raw=true"> 
+<img width=100 src="https://github.com/henriqueotogami/Stanford-CS193p-Apps/blob/main/iconsApp/MapAppIconRounded.png?raw=true"> 
 
 
 <h4><b>Enroute</b></h4>
@@ -347,13 +346,13 @@ struct EnrouteApp: App {
 <hr>
 
 <div align="center">
-  <img alt="M E M O R I Z E" width="250" src="https://github.com/henriqueotogami/Stanford-CS193p-first-project/blob/main/gifsApp/Memorize.gif?raw=true">
-  <img alt="E M O J I A R T" width="250" src="https://github.com/henriqueotogami/Stanford-CS193p-first-project/blob/main/gifsApp/EmojiArt.gif?raw=true">
-  <img alt="E N R O U T E" width="250" src="https://github.com/henriqueotogami/Stanford-CS193p-first-project/blob/main/gifsApp/Enroute.gif?raw=true">
+  <img alt="M E M O R I Z E" width="250" src="https://github.com/henriqueotogami/Stanford-CS193p-Apps/blob/main/gifsApp/Memorize.gif?raw=true">
+  <img alt="E M O J I A R T" width="250" src="https://github.com/henriqueotogami/Stanford-CS193p-Apps/blob/main/gifsApp/EmojiArt.gif?raw=true">
+  <img alt="E N R O U T E" width="250" src="https://github.com/henriqueotogami/Stanford-CS193p-Apps/blob/main/gifsApp/Enroute.gif?raw=true">
 </div>
 
 <div align="center">
-<img alt="E M O J I A R T" width="auto" src="https://github.com/henriqueotogami/Stanford-CS193p-first-project/blob/main/gifsApp/EmojiArt-iPadOS.gif?raw=true">
+<img alt="E M O J I A R T" width="auto" src="https://github.com/henriqueotogami/Stanford-CS193p-Apps/blob/main/gifsApp/EmojiArt-iPadOS.gif?raw=true">
 </div>
 
 <hr>
