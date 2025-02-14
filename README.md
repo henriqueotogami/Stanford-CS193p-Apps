@@ -474,6 +474,23 @@ Depois de uma explicação muito básica de como o UIKit faz algumas coisas que 
 
 ---
 
+## 📝 Leia meus artigos
+
+### [Artigos no Medium](https://medium.com/@henriqueotogami)
+### [Artigos no Dev.to](https://dev.to/henriqueotogami)
+
+<br>
+
+## 💼 Conecte-se comigo
+### [Perfil no LinkedIn](https://www.linkedin.com/in/henrique-matheus-alves-pereira)
+
+<br>
+
+## 🙏🏻 Apoie meu conteúdo
+### [Compre-me um cafézinho | Buy me a coffee](https://ko-fi.com/henriqueotogami) ☕
+
+<hr>
+
 ### Créditos
 
 - [x] [Richard Horvath | Product Designer](https://orwhat.cc) : [Figma | Template iPhone SE 2 Generation 2020](https://www.figma.com/community/file/882254519102673494/Flat-iPhone-SE%2C-7%2C-8%2C-X%2C-11%2C-12-Pro-Mockup)
